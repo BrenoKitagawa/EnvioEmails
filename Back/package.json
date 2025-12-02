@@ -1,0 +1,20 @@
+{
+  "name": "envioemail",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.11",
+    "sequelize": "^6.37.7",
+    "sql2": "^0.0.1"
+  }
+}
