@@ -4,7 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server" : "node --watch server.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,8 @@
     "multer": "^2.0.2",
     "nodemailer": "^7.0.11",
     "sequelize": "^6.37.7",
-    "sql2": "^0.0.1"
+    "sql2": "^0.0.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   }
 }
