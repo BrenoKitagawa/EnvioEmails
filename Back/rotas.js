@@ -10,27 +10,10 @@ const routes = express.Router()
  *     description: Envia emails em massa
  *     tags:
  *       - Email
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               subject:
- *                 type: string
- *                 example: Promoção de Natal
- *               message:
- *                 type: string
- *                 example: Olá, confira nossas ofertas
- *               recipients:
- *                 type: array
- *                 items:
- *                   type: string
- *                   example: email@teste.com
+
  *     responses:
  *       200:
- *         description: Emails enviados com sucesso
+ *         description: Email enviados com sucesso
  *         content:
  *           application/json:
  *             schema:

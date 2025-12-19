@@ -1,3 +1,4 @@
+import path from "path";
 import { mailer } from "../util/nodeMailer.js"
 import fs from 'fs'
 
@@ -6,6 +7,7 @@ export async function sendMailer() {
         const uploadsPath = path.resolve("uploads");
         const files = fs.readdirSync(uploadsPath);
         const fileMatch = files.find(file => file.toLowerCase().includes("emails"));
+
         if (!fileMatch) {
             throw new Error("Nenhum arquivo contendo 'Emails' foi encontrado.");
         }
