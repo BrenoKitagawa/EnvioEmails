@@ -52,6 +52,5 @@ routes.post(
   upload.single("file"),
   sendMailController.uploadArquivos
 )
-routes.post("/upload",upload.single('file'),sendMailController.uploadArquivos)
 
 export default routes
