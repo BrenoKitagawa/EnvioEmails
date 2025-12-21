@@ -3,7 +3,7 @@ import routes from "./rotas.js"
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
 import { swaggerOptions } from "./libs/swaggerConfig.js";
-
+import cors from "cors"
 const swaggerSpec = swaggerJsdoc(swaggerOptions());
 
 const app = express()
@@ -13,6 +13,7 @@ const porta = 3000
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(express.json())
+app.use(cors())
 app.use(routes)
 
 

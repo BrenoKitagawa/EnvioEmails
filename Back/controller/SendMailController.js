@@ -22,18 +22,16 @@ export default {
         }
     },
     async uploadArquivos(req, res) {
-
         if (!req.file) {
             return res.status(400).json({ error: "Nenhum arquivo enviado" })
         }
         try {
-            const result = readFile();
-
+            const result =await readFile();
             if (!result.ok) {
-                return res.status(400).json({ error: result.error, total: result.total });
+                return res.status(400).json({ error: result.error, total: result.total ,emails:result.results});
             }
 
-            return res.status(200).json({ message: "Arquivo válido", total: result.total });
+            return res.status(200).json({ message: "Arquivo válido", total: result.total,emails:result.results });
         } catch (error) {
 
             return res.status(500).json({ e: error.message })
